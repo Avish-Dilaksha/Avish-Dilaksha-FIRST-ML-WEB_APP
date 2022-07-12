@@ -59,7 +59,8 @@ def main():
         p6 = 2
         
     if st.button('Predict'):
-        pred = model.predict(pd.DataFrame([[p1,p2,p3,p4,p5,p6]],columns= ['age','sex','bmi','children','smoker','region']))
+        #pred = model.predict(pd.DataFrame([[p1,p2,p3,p4,p5,p6]],columns= ['age','sex','bmi','children','smoker','region']))
+        pred = model.predict([[p1,p2,p3,p4,p5,p6]])
         
         
         st.success('Your insurance cost is :  {}'.format(round(pred[0],2)))
